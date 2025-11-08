@@ -82,17 +82,17 @@ npm install
 npm run dev
 ```
 
-| Method | Endpoint       | Description       |
-| ------ | -------------- | ----------------- |
-| POST   | `/auth/signup` | Register new user |
-| POST   | `/auth/login`  | Login user        |
-| GET    | `/profile`     | Get user profile  |
-| PUT    | `/profile`     | Update profile    |
-| GET    | `/books`       | Fetch all books   |
-| POST   | `/books`       | Add a new book    |
-| PUT    | `/books/:id`   | Update book       |
-| DELETE | `/books/:id`   | Delete book       |
-
+| Method   | Endpoint      | Description                               |
+| -------- | ------------- | ----------------------------------------- |
+| **POST** | `/register`   | Register a new user                       |
+| **POST** | `/login`      | Login user                                |
+| **POST** | `/logout`     | Logout user                               |
+| **GET**  | `/profile`    | Get logged-in user profile *(protected)*  |
+| **GET**  | `/`           | Fetch all available books *(public)*      |
+| **POST** | `/add`        | Add a new book *(protected)*              |
+| **PUT**  | `/borrow/:id` | Borrow a book *(protected)*               |
+| **PUT**  | `/return/:id` | Return a borrowed book *(protected)*      |
+| **GET**  | `/mybooks`    | Fetch user’s borrowed books *(protected)* |
 
 
 🧰 Postman Collection
@@ -103,9 +103,10 @@ All API routes are included in the Postman collection:
 You can import it directly into Postman for testing.
 
 
-
+---
 🧙🏻Author
 Aman Ahmad
 amank225566@gmail.com
 https://github.com/wizardamxn
 https://amanahmad.vercel.app
+---
