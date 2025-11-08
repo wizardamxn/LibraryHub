@@ -34,7 +34,7 @@ The project demonstrates clean architecture, responsive UI, and secure API integ
 
 
 ## 📂 Project Structure
-
+```bash
 root/
 ├── frontend/
 │ ├── src/
@@ -59,7 +59,7 @@ root/
 │ └── package.json
 │
 └── README.md
-
+```
 ---
 
 ## ⚙️ Setup Instructions
@@ -94,3 +94,18 @@ npm run dev
 | DELETE | `/books/:id`   | Delete book       |
 
 
+
+🧰 Postman Collection
+
+All API routes are included in the Postman collection:
+/docs/LibraryHub.postman_collection.json
+
+You can import it directly into Postman for testing.
+
+
+
+🧙🏻Author
+Aman Ahmad
+amank225566@gmail.com
+https://github.com/wizardamxn
+https://amanahmad.vercel.app
