@@ -1,0 +1,214 @@
+{
+    "info": {
+        "name": "LibraryHub",
+        "_postman_id": "e12345f6-7890-1234-5678-abcdef987654",
+        "description": "Postman collection for LibraryHub app (JWT via cookies).",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "Register User",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"fullName\": \"Test User\",\n    \"email\": \"test@example.com\",\n    \"password\": \"123456\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:2222/register",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "2222",
+                            "path": [
+                                "register"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Login User",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"email\": \"test@example.com\",\n    \"password\": \"123456\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:2222/login",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "2222",
+                            "path": [
+                                "login"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Logout User",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:2222/logout",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "2222",
+                            "path": [
+                                "logout"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Profile",
+            "item": [
+                {
+                    "name": "Get Profile",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:2222/profile",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "2222",
+                            "path": [
+                                "profile"
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Books",
+            "item": [
+                {
+                    "name": "Get Available Books",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:2222/",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "2222",
+                            "path": []
+                        }
+                    }
+                },
+                {
+                    "name": "Add Book",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"title\": \"The Pragmatic Programmer\",\n    \"author\": \"Andrew Hunt\",\n    \"category\": \"Software Engineering\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:2222/add",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "2222",
+                            "path": [
+                                "add"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Borrow Book",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:2222/borrow/:id",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "2222",
+                            "path": [
+                                "borrow",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Return Book",
+                    "request": {
+                        "method": "PUT",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:2222/return/:id",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "2222",
+                            "path": [
+                                "return",
+                                ":id"
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Get My Books",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:2222/mybooks",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "2222",
+                            "path": [
+                                "mybooks"
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
