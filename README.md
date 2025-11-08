@@ -31,6 +31,10 @@ The project demonstrates clean architecture, responsive UI, and secure API integ
 | Validation | Express-validator / Custom middleware |
 
 ---
+
+
+## 📂 Project Structure
+
 root/
 ├── frontend/
 │ ├── src/
@@ -55,7 +59,6 @@ root/
 │ └── package.json
 │
 └── README.md
-
 
 ---
 
@@ -90,7 +93,4 @@ npm run dev
 | PUT    | `/books/:id`   | Update book       |
 | DELETE | `/books/:id`   | Delete book       |
 
-
-
-## 📂 Project Structure
 
