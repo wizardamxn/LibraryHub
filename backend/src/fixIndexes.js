@@ -1,8 +1,7 @@
 import mongoose from "mongoose";
-import User from "./models/user.js"; // adjust path to your schema
-
-const MONGO_URI = "mongodb+srv://amank225566:nq1oNFBKxRXiKfKu@wizardamxnxcluster.ovmio0y.mongodb.net/assignmentDB"
-    ; // change if needed
+import User from "./models/user.js"; 
+const MONGO_URI = process.env.MONGO_URI
+    ;
 
 const fixIndexes = async () => {
     try {
@@ -10,7 +9,6 @@ const fixIndexes = async () => {
 
         console.log("Connected to MongoDB");
 
-        // Drop the old emailId index if it exists
         await User.collection.dropIndex("emailId_1").catch(err => {
             if (err.codeName === "IndexNotFound") {
                 console.log("Index emailId_1 not found, skipping.");
@@ -21,7 +19,6 @@ const fixIndexes = async () => {
 
         console.log("Dropped old index successfully");
 
-        // Ensure new indexes (from schema) are applied
         await User.syncIndexes();
 
         console.log("Rebuilt indexes successfully");
